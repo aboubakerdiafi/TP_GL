@@ -7,7 +7,7 @@
    Remarquez que le projet est constitué de trois (04) modules, remarquez que vous avez une interface définissant le service **TimerService** ainsi que de deux interfaces dans le même modules permettant d’implémenter le mécanisme de l’observer.  Une implémentation de base de ce service vous a été octroyée.
 ##
 **3/** Nous souhaitons maintenant compléter le code de la classe **Horloge** afin qu’elle affiche sur console l’heure à chaque seconde. Pour y parvenir, il faut faire ce qui suit :
-1.	Dans la classe amorce (main) instanciez d’abord le **TimerServiceProvider**, puis injectez l’instance dans une instance de Horloge après avoir fait les modifications nécessaires de cette dernière. 
+1.	Dans la classe amorce (main) instanciez d’abord le **TimerService**, puis injectez l’instance dans une instance de Horloge après avoir fait les modifications nécessaires de cette dernière. 
 2.	Dans horloge assurez vous de vous inscrire en tant que observer du TimerService.
 3.	Notez que Horloge ne doit pas dépendre de l’implémentation de TimerService mais uniquement de l’abstraction.
 4.	Instanciez plusieurs Horloges et vérifier leurs fonctionnement.
