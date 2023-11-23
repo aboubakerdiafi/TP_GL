@@ -165,4 +165,7 @@ public class DummyTimeServiceImpl
     public int getSecondes() {
         return secondes;
     }
+    public boolean listenersisempty() {
+        return listeners.isEmpty();
+    }
 }
