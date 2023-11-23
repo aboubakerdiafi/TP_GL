@@ -22,17 +22,20 @@ public class App {
 //        Horloge horloge3 = new Horloge("Num 3",timerService) ;
 //        Horloge horloge4= new Horloge("Num 4",timerService) ;
 //        Horloge horloge5 = new Horloge("Num 5",timerService) ;
+/** throw an exception that indicete a modificaion was detected during iterating
+ *  (whene compt==0 it removed automaticlt but during iterating )
+ *  **/
+        CompteARebours compteur1 =new CompteARebours("compteur1",12,timerService);
+        CompteARebours compteur2=new CompteARebours("compteur2",10,timerService);
+        CompteARebours compteur3 =new CompteARebours("compteur3",15,timerService);
+        CompteARebours compteur4 =new CompteARebours("compteur4",20,timerService);
+        CompteARebours compteur5 =new CompteARebours("compteur5",17,timerService);
+        CompteARebours compteur6 =new CompteARebours("compteur6",18,timerService);
+        CompteARebours compteur7 =new CompteARebours("compteur7",18,timerService);
+        CompteARebours compteur8 =new CompteARebours("compteur8",14,timerService);
+        CompteARebours compteur9 =new CompteARebours("compteur9",22,timerService);
+        CompteARebours compteur10 =new CompteARebours("compteur10",11,timerService);
 
-        CompteARebours compteur1 =new CompteARebours("compteur1",28,timerService);
-        CompteARebours compteur2=new CompteARebours("compteur2",32,timerService);
-        CompteARebours compteur3 =new CompteARebours("compteur3",30,timerService);
-        CompteARebours compteur4 =new CompteARebours("compteur4",25,timerService);
-        CompteARebours compteur5 =new CompteARebours("compteur5",20,timerService);
-        CompteARebours compteur6 =new CompteARebours("compteur6",34,timerService);
-        CompteARebours compteur7 =new CompteARebours("compteur7",37,timerService);
-        CompteARebours compteur8 =new CompteARebours("compteur8",29,timerService);
-        CompteARebours compteur9 =new CompteARebours("compteur9",40,timerService);
-        CompteARebours compteur10 =new CompteARebours("compteur10",45,timerService);
     }
 
     public static void clearScreen() {
