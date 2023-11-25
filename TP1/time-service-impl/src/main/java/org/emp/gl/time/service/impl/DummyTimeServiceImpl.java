@@ -68,6 +68,11 @@ public class DummyTimeServiceImpl implements TimerService {
         listeners.remove(pl) ;
     }
 
+    @Override
+    public boolean listenersIsEmpty() {
+        return false;
+    }
+
     private void timeChanged() {
         setTimeValues();
     }

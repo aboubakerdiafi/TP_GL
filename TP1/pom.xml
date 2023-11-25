@@ -21,7 +21,7 @@
     <dependency>
       <groupId>junit</groupId>
       <artifactId>junit</artifactId>
-      <version>4.11</version>
+      <version>4.13.2</version>
       <scope>test</scope>
     </dependency>
   </dependencies>
@@ -31,5 +31,7 @@
   <module>timer-service</module>
   <module>time-service-impl</module>
   <module>timer-service-client</module>
+     <module>interface-graphique</module>
+
  </modules>
 </project>
