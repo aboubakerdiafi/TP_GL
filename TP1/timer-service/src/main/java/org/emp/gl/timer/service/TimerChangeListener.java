@@ -21,5 +21,6 @@ public interface TimerChangeListener extends PropertyChangeListener {
     // cette méthode est appelé du TimeChangeProvider à chaque 
     // fois qu'il y a un changement sur l'une des propriété de l'heure    
     void propertyChange (String prop, Object oldValue, Object newValue) ;
-                  
+
+
 }

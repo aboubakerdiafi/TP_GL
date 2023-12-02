@@ -46,12 +46,12 @@ public class CompteARebours implements TimerChangeListener {
             if(compt>0)
             {
                 if (compt!=0) {
-
                     affichercompt();
                     compt--;
                 }
                 else
-                { this.timerService.removeTimeChangeListener(this);
+                {
+                    this.timerService.removeTimeChangeListener(this);
 
                 }
 

@@ -5,6 +5,7 @@
     <option name="originalFiles">
       <list>
         <option value="$PROJECT_DIR$/TP1/pom.xml" />
+        <option value="$PROJECT_DIR$/lookup-module/pom.xml" />
       </list>
     </option>
     <option name="ignoredFiles">
@@ -12,6 +13,7 @@
         <option value="$PROJECT_DIR$/TP1/GUI/pom.xml" />
         <option value="$PROJECT_DIR$/TP1/InterfaceGraphique/pom.xml" />
         <option value="$PROJECT_DIR$/TP1/graphique/pom.xml" />
+        <option value="$PROJECT_DIR$/lookup-module/pom.xml" />
       </set>
     </option>
   </component>

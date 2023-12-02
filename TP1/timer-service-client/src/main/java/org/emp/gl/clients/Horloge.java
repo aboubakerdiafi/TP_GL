@@ -1,6 +1,8 @@
 package org.emp.gl.clients ; 
 
 import org.emp.gl.GUI.GUI;
+import org.emp.gl.lookup_module.Lookup;
+
 import org.emp.gl.timer.service.TimerChangeListener;
 import org.emp.gl.timer.service.TimerService ;
 
@@ -21,6 +23,19 @@ public class Horloge implements TimerChangeListener {
         this.timerService.addTimeChangeListener(this);
 
         System.out.println ("Horloge "+name+" initialized!") ;
+
+
+    }
+    public Horloge(String name){
+        this.window = new GUI();
+        this.name = name ;
+
+        this.timerService =  Lookup.getInstance().getService(TimerService.class);
+
+        this.timerService.addTimeChangeListener(this);
+        //    System.out.println(Luckup.getInstance().getService(TimerService.class.getName()));
+
+            System.out.println("Horloge " + name + " initialized!");
 
 
     }

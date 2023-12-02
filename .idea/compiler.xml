@@ -10,6 +10,7 @@
         <module name="time-service-impl" />
         <module name="timer-service" />
         <module name="timer-service-client" />
+        <module name="lookup_module" />
         <module name="launcher" />
       </profile>
     </annotationProcessing>
@@ -17,6 +18,7 @@
       <module name="GUI" target="20" />
       <module name="interface" target="20" />
       <module name="InterfaceGraphique" target="20" />
+      <module name="lookup-module" target="20" />
     </bytecodeTargetLevel>
   </component>
 </project>
