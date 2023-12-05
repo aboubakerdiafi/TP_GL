@@ -31,8 +31,10 @@
   <module>timer-service</module>
   <module>time-service-impl</module>
   <module>timer-service-client</module>
-     <module>interface-graphique</module>
+
      <module>lookup_module</module>
+     <module>graphique-interface</module>
+
 
  </modules>
 </project>

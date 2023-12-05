@@ -6,6 +6,7 @@
       <list>
         <option value="$PROJECT_DIR$/TP1/pom.xml" />
         <option value="$PROJECT_DIR$/lookup-module/pom.xml" />
+        <option value="$PROJECT_DIR$/TP1/interface-graphique/pom.xml" />
       </list>
     </option>
     <option name="ignoredFiles">
@@ -13,11 +14,13 @@
         <option value="$PROJECT_DIR$/TP1/GUI/pom.xml" />
         <option value="$PROJECT_DIR$/TP1/InterfaceGraphique/pom.xml" />
         <option value="$PROJECT_DIR$/TP1/graphique/pom.xml" />
+        <option value="$PROJECT_DIR$/TP1/interface-graphique/pom.xml" />
+        <option value="$PROJECT_DIR$/TP1/interface_module/pom.xml" />
         <option value="$PROJECT_DIR$/lookup-module/pom.xml" />
       </set>
     </option>
   </component>
-  <component name="ProjectRootManager" version="2" languageLevel="JDK_20" default="true" project-jdk-name="20" project-jdk-type="JavaSDK">
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_20" default="true" project-jdk-name="17" project-jdk-type="JavaSDK">
     <output url="file://$PROJECT_DIR$/out" />
   </component>
 </project>

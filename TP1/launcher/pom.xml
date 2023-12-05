@@ -25,7 +25,7 @@
     <dependency>
       <groupId>junit</groupId>
       <artifactId>junit</artifactId>
-      <version>4.11</version>
+      <version>4.13.2</version>
       <scope>test</scope>
     </dependency>
     
@@ -50,7 +50,7 @@
     </dependency>
       <dependency>
           <groupId>org.emp.gl.graphique</groupId>
-          <artifactId>interface-graphique</artifactId>
+          <artifactId>graphique-interface</artifactId>
           <version>0.0.1</version>
           <scope>compile</scope>
       </dependency>

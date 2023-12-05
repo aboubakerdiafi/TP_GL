@@ -1,7 +1,7 @@
 # TP 1 : Le Design Pattern Observer
 
 **1/** Récupérer le code source.
-##
+##[README.md](README.md)
 **2/** Ouvrir le code obtenu en utilisant votre IDE préféré.
 
    Remarquez que le projet est constitué de trois (04) modules, remarquez que vous avez une interface définissant le service **TimerService** ainsi que de deux interfaces dans le même modules permettant d’implémenter le mécanisme de l’observer.  Une implémentation de base de ce service vous a été octroyée.

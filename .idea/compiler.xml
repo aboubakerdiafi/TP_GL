@@ -6,17 +6,19 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
-        <module name="interface-graphique" />
         <module name="time-service-impl" />
         <module name="timer-service" />
         <module name="timer-service-client" />
         <module name="lookup_module" />
+        <module name="graphique-interface" />
         <module name="launcher" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
       <module name="GUI" target="20" />
       <module name="interface" target="20" />
+      <module name="interface-graphique" target="20" />
+      <module name="interface_module" target="20" />
       <module name="InterfaceGraphique" target="20" />
       <module name="lookup-module" target="20" />
     </bytecodeTargetLevel>

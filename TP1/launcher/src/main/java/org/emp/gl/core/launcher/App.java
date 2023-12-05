@@ -1,9 +1,11 @@
 package org.emp.gl.core.launcher;
 
-import org.emp.gl.GUI.GUI;
+
 import org.emp.gl.clients.CompteARebours;
 import org.emp.gl.clients.Horloge ;
 
+import org.emp.gl.graphique.ButtonViewer;
+import org.emp.gl.graphique.WatchViewer;
 import org.emp.gl.lookup_module.Lookup;
 import org.emp.gl.time.service.impl.DummyTimeServiceImpl;
 import org.emp.gl.timer.service.TimerService;
@@ -14,22 +16,26 @@ import org.emp.gl.timer.service.TimerService;
  *
  */
 public class App {
+    static {
+// instanciation du service TimerService
+// enregistrement dans le lookup
+        TimerService timerService = new DummyTimeServiceImpl();
+        Lookup.getInstance().subscribeService(TimerService.class,timerService);
+    }
+    public static void main ( String [] args ) {
+// instanciation de l'interface graphique
+        java . awt . EventQueue . invokeLater ( new Runnable () {
+            public void run () {
+                WatchViewer w = new WatchViewer () ;
+                ButtonViewer b = new ButtonViewer (w ) ;
+            }
+        }) ;
 
-    public static void main(String[] args) {
-        TimerService t=new DummyTimeServiceImpl();
-
-        Lookup.getInstance().subscribeService(TimerService.class,t);
-
-
-
-
-testDuTimeService(t);
-//        testtp2();
 
     }
 
     private static void testDuTimeService(TimerService timerService) {
-      Horloge horloge = new Horloge("Num 1",timerService) ;
+      //Horloge horloge = new Horloge("Num 1",timerService) ;
 
 /** throw an exception that indicete a modificaion was detected during iterating
  *  (whene compt==0 it removed automaticlt but during iterating )

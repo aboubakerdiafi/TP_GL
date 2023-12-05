@@ -8,14 +8,22 @@
         <artifactId>firsttp</artifactId>
         <version>0.0.1</version>
     </parent>
-    <packaging>jar</packaging>
+
     <groupId>org.emp.gl.graphique</groupId>
-    <artifactId>interface-graphique</artifactId>
+    <artifactId>graphique-interface</artifactId>
 
     <properties>
         <maven.compiler.source>20</maven.compiler.source>
         <maven.compiler.target>20</maven.compiler.target>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
     </properties>
+    <dependencies>
+        <dependency>
+            <groupId>org.emp.gl</groupId>
+            <artifactId>timer-service-client</artifactId>
+            <version>0.0.1</version>
+            <scope>compile</scope>
+        </dependency>
+    </dependencies>
 
 </project>
