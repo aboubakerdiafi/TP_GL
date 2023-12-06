@@ -18,6 +18,7 @@ public class ButtonViewer extends javax . swing . JFrame {
         java . awt . GridBagConstraints gridBagConstraints ;
         jButton1 = new javax . swing . JButton () ;
         jButton2 = new javax . swing . JButton () ;
+        jButton3 = new javax . swing . JButton () ;
         setDefaultCloseOperation ( javax . swing . WindowConstants . EXIT_ON_CLOSE );
         getContentPane () . setLayout ( new java . awt . GridBagLayout () ) ;
         jButton1 . setText (" Set ") ;
@@ -32,6 +33,11 @@ public class ButtonViewer extends javax . swing . JFrame {
         gridBagConstraints . gridy = 0;
         gridBagConstraints . insets = new java . awt . Insets (21 , 2, 21 , 2) ;
         getContentPane () . add ( jButton2 , gridBagConstraints );
+        jButton3 . setText (" Setting ") ;
+        jButton3 . setFont ( new java . awt . Font (" Consolas ", 1, 32) ); // NOI18N
+        gridBagConstraints = new java . awt . GridBagConstraints () ;
+        gridBagConstraints . insets = new java . awt . Insets (21 , 2, 21 , 2) ;
+        getContentPane () . add ( jButton3 , gridBagConstraints );
         pack () ;
         jButton1.addActionListener(new ActionListener() {
             @Override
@@ -47,9 +53,17 @@ public class ButtonViewer extends javax . swing . JFrame {
                 w.doMode();
             }
         });
+        jButton3.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                // Code to be executed when the button is clicked
+                w.doSetting();
+            }
+        });
 
     }
     private javax . swing . JButton jButton1 ;
     private javax . swing . JButton jButton2 ;
+    private javax . swing . JButton jButton3 ;
 
 }

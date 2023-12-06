@@ -7,7 +7,10 @@ public abstract class  WindowState {
         this.context = context;
     }
 public abstract void changeState();
-    public abstract void affichHour();
+    public abstract void display();
+    public abstract void doMod();
+    public abstract void doSet();
+    public abstract void doSetting();
 
 
 }

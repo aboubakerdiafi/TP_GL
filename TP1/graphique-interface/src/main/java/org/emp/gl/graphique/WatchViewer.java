@@ -1,5 +1,6 @@
 package org.emp.gl.graphique;
 
+import org.emp.gl.clients.Chronometre;
 import org.emp.gl.clients.Horloge;
 
 import javax.swing.*;
@@ -12,26 +13,36 @@ public class WatchViewer extends javax . swing . JFrame {
     public WindowState state;
     public boolean etatClignotant=true;
     Horloge h = new Horloge( getName () ) ;
+    Chronometre c=new Chronometre(getName());
+
+    public Chronometre getC() {
+        return c;
+    }
+
     private javax . swing . JLabel hh = new javax . swing . JLabel () ;
     private javax . swing . JLabel mm = new javax . swing . JLabel () ;
     private javax . swing . JLabel ss = new javax . swing . JLabel () ;
     private javax . swing . JLabel sep = new javax . swing . JLabel () ;
     private javax . swing . JLabel sep2 = new javax . swing . JLabel () ;
     private javax . swing . JLabel mod = new javax . swing . JLabel () ;
+    Timer timerMode;
 
     public WatchViewer (  ) {
         this.state = new HhMn(this);
 
 
         initComponents () ;
-        new Timer(500, new ActionListener() {
+
+      timerMode = new Timer(500, new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
                 etatClignotant=! etatClignotant;
-                state.affichHour();
+                state.display();
 
             }
-        }).start();
+        });
+      timerMode.start();
+
     }
     @SuppressWarnings (" unchecked ")
     private void initComponents () {
@@ -71,12 +82,20 @@ public class WatchViewer extends javax . swing . JFrame {
         System . out . println (" SET ") ;
 
 // TODO
-        this.state.changeState();
+
+        this.state.doSet();
 
 
     }
+
+    public void doSetting () {
+        System . out . println (" SETTING ") ;
+        // TODO our propsition
+    this.state.doSetting();
+    }
     public void doMode () {
         System . out . println (" MODE ");
+        this.state.doMod();
 // TODO
     }
     public void ticHappened () {
@@ -86,7 +105,7 @@ public class WatchViewer extends javax . swing . JFrame {
     public String clignotent () {
         if(this.etatClignotant)
             return ":";
-        return "";
+        return " ";
     }
     public void setTextPosition1 ( String txt ) {
         hh . setText ( txt ) ;

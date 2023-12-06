@@ -33,9 +33,10 @@ public class Horloge implements TimerChangeListener {
     }
     @Override
     public void propertyChange ( String prop , Object oldValue , Object newValue ) {
-        if ( TimerChangeListener . SECONDE_PROP . equals ( prop )){
+        if ( TimerChangeListener .SECONDE_PROP . equals ( prop )){
             secondElapsed () ;
         }
+
     }
     void secondElapsed () {
         seconds =( seconds +1) %60 ;
@@ -57,6 +58,15 @@ public class Horloge implements TimerChangeListener {
     public int getHours () {
         return hours ;
     }
+
+    public void setMinutes(int minutes) {
+        this.minutes = minutes;
+    }
+
+    public void setHours(int hours) {
+        this.hours = hours;
+    }
+
     public int getMinutes () {
         return minutes ;
     }
