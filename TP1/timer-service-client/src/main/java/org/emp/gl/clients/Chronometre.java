@@ -1,8 +1,8 @@
 package org.emp.gl.clients;
 
 
-import org.emp.gl.lookup_module.Lookup;
 
+import org.emp.gl.lookup_module.Lookup;
 import org.emp.gl.timer.service.TimerChangeListener;
 import org.emp.gl.timer.service.TimerService ;
 
@@ -71,7 +71,7 @@ public class Chronometre implements TimerChangeListener {
 
     public Chronometre (String name ) {
         this . name = name ;
-        timerService = Lookup . getInstance () . getService ( TimerService . class );
+        timerService = Lookup. getInstance () . getService ( TimerService . class );
         if ( timerService != null ) {
             seconds = 0;
             DixiemeDeSeconde = 0;

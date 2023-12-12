@@ -3,6 +3,7 @@ package org.emp.gl.graphique;
 class HhMn extends WindowState{
     public HhMn(WatchViewer context) {
         super(context);
+        context.timerMode.setDelay(500);
     }
 
     @Override

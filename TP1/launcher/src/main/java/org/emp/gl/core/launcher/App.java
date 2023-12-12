@@ -1,6 +1,6 @@
 package org.emp.gl.core.launcher;
 
-
+import java.util.Timer;
 import org.emp.gl.clients.CompteARebours;
 import org.emp.gl.clients.Horloge ;
 
@@ -9,6 +9,12 @@ import org.emp.gl.graphique.WatchViewer;
 import org.emp.gl.lookup_module.Lookup;
 import org.emp.gl.time.service.impl.DummyTimeServiceImpl;
 import org.emp.gl.timer.service.TimerService;
+import org.exmpl.watchviewerlookup.LookupWatch;
+
+import javax.swing.*;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
+import java.util.TimerTask;
 
 
 /**
@@ -27,7 +33,22 @@ public class App {
         java . awt . EventQueue . invokeLater ( new Runnable () {
             public void run () {
                 WatchViewer w = new WatchViewer () ;
+                WatchViewer w1 = new WatchViewer () ;
+                WatchViewer w2 = new WatchViewer () ;
                 ButtonViewer b = new ButtonViewer (w ) ;
+//                LookupWatch.getInstance().subscribeService(w.toString(),w);
+//                LookupWatch.getInstance().subscribeService(w1.toString(),w1);
+                //LookupWatch.getInstance().subscribeService(w1,w1);
+               Timer t=new Timer();
+               t.schedule(new TimerTask() {
+                   @Override
+                   public void run() {
+                       WatchViewer w3 =new WatchViewer();
+                       b.updateListe();
+                   }
+               }, 3000);
+
+
             }
         }) ;
 
@@ -61,4 +82,5 @@ public class App {
         System.out.print("\033[H\033[2J");
         System.out.flush();
     }
+
 }

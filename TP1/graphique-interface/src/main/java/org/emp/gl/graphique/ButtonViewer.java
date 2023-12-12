@@ -1,10 +1,16 @@
 package org.emp.gl.graphique;
 
+import org.exmpl.watchviewerlookup.LookupWatch;
+
+import javax.swing.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.util.ArrayList;
+import java.util.Map;
 
 public class ButtonViewer extends javax . swing . JFrame {
     private WatchViewer w ;
+    JComboBox<String> dropDownList=new JComboBox<>();
     public ButtonViewer ( WatchViewer w) {
         this . w = w ;
         initComponents () ;
@@ -15,6 +21,7 @@ public class ButtonViewer extends javax . swing . JFrame {
     private void initComponents () {
         setLocation (200 , 200) ;
         setVisible ( true );
+
         java . awt . GridBagConstraints gridBagConstraints ;
         jButton1 = new javax . swing . JButton () ;
         jButton2 = new javax . swing . JButton () ;
@@ -39,6 +46,24 @@ public class ButtonViewer extends javax . swing . JFrame {
         gridBagConstraints . insets = new java . awt . Insets (21 , 2, 21 , 2) ;
         getContentPane () . add ( jButton3 , gridBagConstraints );
         pack () ;
+
+
+updateListe();
+        // Ajoutez la liste déroulante au panneau
+        getContentPane().add(dropDownList);
+        dropDownList.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                // This method will be called when the selection in the JComboBox changes
+
+                JComboBox<String> comboBox = (JComboBox<String>) e.getSource();
+                String selectedOption = (String) comboBox.getSelectedItem();
+                if(selectedOption != "ALL")
+                   w=LookupWatch.getInstance().getWatch(selectedOption);
+                else
+                    defaultmod();
+            }
+        });
         jButton1.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
@@ -60,10 +85,33 @@ public class ButtonViewer extends javax . swing . JFrame {
                 w.doSetting();
             }
         });
-
+        setSize(500,200);
     }
     private javax . swing . JButton jButton1 ;
     private javax . swing . JButton jButton2 ;
     private javax . swing . JButton jButton3 ;
+public void updateListe(){
+    ArrayList<String> options=new ArrayList<>();
+    Map<String,WatchViewer> watches=LookupWatch.getInstance().getWatches();
+    for (String na :watches.keySet()) {
+        options.add(na);
+        //System.out.println(na);
 
+    }
+    options.add("ALL");
+    dropDownList.setModel(new DefaultComboBoxModel<>(options.toArray(new String[0])));
+
+
+}
+void  defaultmod(){
+    Map<String,WatchViewer> watches=LookupWatch.getInstance().getWatches();
+    for (String na :watches.keySet()) {
+        watches.get(na).state=new HhMn(watches.get(na).state.context);
+        //System.out.println(na);
+
+
+    }
+
+
+}
 }

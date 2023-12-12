@@ -34,7 +34,21 @@
 
      <module>lookup_module</module>
      <module>graphique-interface</module>
+     <module>lookup_watchviewer</module>
 
 
  </modules>
+
+    <build>
+        <plugins>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-compiler-plugin</artifactId>
+                <configuration>
+                    <proc>none</proc>
+                </configuration>
+            </plugin>
+        </plugins>
+    </build>
+
 </project>

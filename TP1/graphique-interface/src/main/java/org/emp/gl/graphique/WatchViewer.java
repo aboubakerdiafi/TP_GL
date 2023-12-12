@@ -2,6 +2,7 @@ package org.emp.gl.graphique;
 
 import org.emp.gl.clients.Chronometre;
 import org.emp.gl.clients.Horloge;
+import org.exmpl.watchviewerlookup.LookupWatch;
 
 import javax.swing.*;
 import java.awt.event.ActionEvent;
@@ -15,6 +16,8 @@ public class WatchViewer extends javax . swing . JFrame {
     Horloge h = new Horloge( getName () ) ;
     Chronometre c=new Chronometre(getName());
 
+
+
     public Chronometre getC() {
         return c;
     }
@@ -25,22 +28,22 @@ public class WatchViewer extends javax . swing . JFrame {
     private javax . swing . JLabel sep = new javax . swing . JLabel () ;
     private javax . swing . JLabel sep2 = new javax . swing . JLabel () ;
     private javax . swing . JLabel mod = new javax . swing . JLabel () ;
-    Timer timerMode;
+    Timer timerMode =new Timer(500, new ActionListener() {
+        @Override
+        public void actionPerformed(ActionEvent e) {
+            etatClignotant=! etatClignotant;
+            state.display();
+
+        }
+    });;
 
     public WatchViewer (  ) {
         this.state = new HhMn(this);
 
-
+        LookupWatch.getInstance().subscribeService(this.getName(),this);
         initComponents () ;
 
-      timerMode = new Timer(500, new ActionListener() {
-            @Override
-            public void actionPerformed(ActionEvent e) {
-                etatClignotant=! etatClignotant;
-                state.display();
 
-            }
-        });
       timerMode.start();
 
     }
